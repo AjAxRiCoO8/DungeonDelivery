@@ -26,7 +26,7 @@ public class PlayerUI : MonoBehaviour
     {
         float totalScale = _HealthBar.localScale.x;
         //float healthScale = (_Health / _MaxHealth) * totalScale;
-        float healthScale = _HealthBar.localScale.x; //use this temporarily until real variables are ready
+        float healthScale = _HealthBar.localScale.x; //use this temporarily until real variables are added.
         
         _HealthBar.localScale = new Vector3(healthScale, _HealthBar.localScale.y, 1);
         _HealthBarBackground.localScale = new Vector3(totalScale - healthScale, _HealthBarBackground.localScale.y, 1);
