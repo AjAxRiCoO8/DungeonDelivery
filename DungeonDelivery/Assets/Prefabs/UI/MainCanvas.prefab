@@ -88,7 +88,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224594820405094416}
-  - component: {fileID: 114848133262015118}
   m_Layer: 5
   m_Name: player-ui
   m_TagString: Untagged
@@ -121,6 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224338786390299146}
+  - component: {fileID: 114571889054867302}
   m_Layer: 5
   m_Name: player-health-bar
   m_TagString: Untagged
@@ -263,6 +263,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114571889054867302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775343977685756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff25e45b447c2ec4d80fa20389241388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _DontShowIfFull: 0
+  _HasTextComponent: 1
+  _HealthBar: {fileID: 224743849265568486}
+  _HealthBarBackground: {fileID: 224192180158384424}
+  _HealthBarText: {fileID: 114172151468590392}
 --- !u!114 &114660039795452540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,22 +295,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114848133262015118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1621109195327938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff25e45b447c2ec4d80fa20389241388, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _DontShowIfFull: 0
-  _HasTextComponent: 1
-  _HealthBar: {fileID: 224743849265568486}
-  _HealthBarBackground: {fileID: 224192180158384424}
-  _HealthBarText: {fileID: 114172151468590392}
 --- !u!222 &222068221316122318
 CanvasRenderer:
   m_ObjectHideFlags: 1
