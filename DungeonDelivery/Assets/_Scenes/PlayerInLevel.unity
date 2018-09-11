@@ -6106,10 +6106,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 50735371161680428, guid: 615acb11d8a783d4eadb87b84ac5569d,
+    - target: {fileID: 20483986913984692, guid: 615acb11d8a783d4eadb87b84ac5569d,
         type: 2}
-      propertyPath: m_Constraints
-      value: 4
+      propertyPath: orthographic size
+      value: 0.6604558
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 615acb11d8a783d4eadb87b84ac5569d, type: 2}
@@ -19646,7 +19646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1712785084
 AudioListener:
   m_ObjectHideFlags: 0
