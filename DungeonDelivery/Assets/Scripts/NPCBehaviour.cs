@@ -48,7 +48,8 @@ public class NPCBehaviour : MonoBehaviour
 
         _SpeechBubble.SetActive(true);
 
-        _Camera.GetComponent<Animation>().Play();
+        collision.GetComponent<Animator>().Play("CameraMoveUp");
+       // _Camera.GetComponent<Animation>().Play();
 
         pm.enabled = false;
 
