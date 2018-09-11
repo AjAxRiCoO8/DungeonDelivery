@@ -8,30 +8,40 @@ public class MeleeAttack : MonoBehaviour {
     private GameObject weaponSprite;
 
     private float rotationSpeed;
+    private bool isAttacking;
 
     private Animator animator;
 
     private void Start()
     {
+        isAttacking = false;
         animator = weaponSprite.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update () {
-		// Rotate from 46 to 91 on the z axis
+        // Rotate from 46 to 91 on the z axis
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0) && !animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponRotation"))
         {
-            Debug.Log("MouseClick");
             animator.Play("WeaponRotation");
+            isAttacking = true;
         }
-	}
+
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1 && animator.IsInTransition(0))
+            isAttacking = false;
+    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            // Do stuff
+            if (isAttacking)
+            {
+                collision.GetComponent<Health>().TakeDamage(20);
+                isAttacking = false;
+            }
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Health : MonoBehaviour
 {
@@ -13,6 +11,12 @@ public class Health : MonoBehaviour
         _Current = _Maximum;
         _HealthBar.UpdateHealthBar(_Current, _Maximum);
 	}
+
+    private void Update()
+    {
+        if (_Current <= 0 && gameObject.tag != "Player")
+            Destroy(gameObject);
+    }
 
     public void TakeDamage(int amount)
     {
