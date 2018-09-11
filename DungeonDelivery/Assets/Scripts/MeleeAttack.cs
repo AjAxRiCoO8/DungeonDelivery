@@ -21,7 +21,6 @@ public class MeleeAttack : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         // Rotate from 46 to 91 on the z axis
-
         if (Input.GetKey(KeyCode.Mouse0) && !animator.GetCurrentAnimatorStateInfo(0).IsName("WeaponRotation"))
         {
             animator.Play("WeaponRotation");
